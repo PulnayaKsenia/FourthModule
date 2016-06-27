@@ -2,11 +2,13 @@ package com.goit.fourthmodule.thirdtask;
 
 public class Main {
     public static void main(String[] args) {
+
         CoordinatesX x = new CoordinatesX();
-        System.out.println("Расстояние между двумя точками по x: "+x.coordinatesX());
+        System.out.println("The distance between two points x: "+x.coordinatesX());
 
         CoordinatesY y = new CoordinatesY();
-        System.out.println("Расстояние между двумя точками по y: "+y.coordinatesY());
+        System.out.println("The distance between two points y: "+y.coordinatesY());
+
     }
 
 }

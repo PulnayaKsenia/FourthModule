@@ -1,12 +1,15 @@
 package com.goit.fourthmodule.secondtask;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        CelsiusFarenheit v = new CelsiusFarenheit();
-        System.out.println("Перевод температуры из градусов Цельсия в градусы по Фаренгейту v: "+v.celsiusFarenheit());
+        CelsiusFarenheit cf = new CelsiusFarenheit();
+        System.out.println("Conversion temperature from Celsius to Fahrenheit: "+cf.celsiusFarenheit());
 
-        FarenheitCelsius w = new FarenheitCelsius();
-        System.out.println("Перевод температуры из градусо по Фаренгейту в градусы Цельсия w: "+w.farenheitCelsius());
+
+        FarenheitCelsius fc = new FarenheitCelsius();
+        System.out.println("Conversion temperature from Fahrenheit to Celsius: "+fc.fahrenheitCelsius());
     }
 }
