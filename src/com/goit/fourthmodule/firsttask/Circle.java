@@ -1,19 +1,35 @@
 package com.goit.fourthmodule.firsttask;
 
-import java.util.Scanner;
+class Circle extends GeometricFigure {
 
-public class Circle {
-    public double radius;
-    public double PI;
+    private double radius;
 
-    public double squareCircle() {
-        Scanner scanner = new Scanner(System.in);
+    public double getRadius() {
 
-        System.out.println("Enter radius of a circle: ");
-        double radius = scanner.nextDouble();
+        return radius;
+    }
 
-        double sCircle = Math.PI*radius*radius;
-        return sCircle;
+    public void setRadius(double radius) {
 
-}
+        this.radius = radius;
+    }
+
+    @Override
+    public String getFigureType() {
+
+        return "Circle";
+    }
+
+    @Override
+    public String getInitialParams() {
+
+        return "radius of square: ";
+    }
+
+    @Override
+    public double calculate() {
+
+        return Math.PI * radius * radius;
+    }
+
 }
