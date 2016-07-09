@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Util pointXY = new Util();
+        Runner pointXY = new Runner();
         Point xy = pointXY.readConsole();
 
         double calculate = xy.calculate();

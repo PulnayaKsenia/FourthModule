@@ -2,9 +2,27 @@ package com.goit.fourthmodule.thirdtask;
 
 import java.util.Scanner;
 
-class CoordinatesY extends Point{
+class CoordinatesXY extends Point {
+    public double x1;
+    public double x2;
     public double y1;
     public double y2;
+
+    public double getX1() {
+        return x1;
+    }
+
+    public void setX1(double x1) {
+        this.x1 = x1;
+    }
+
+    public double getX2() {
+        return x2;
+    }
+
+    public void setX2(double x2) {
+        this.x2 = x2;
+    }
 
     public double getY1() {
         return y1;
@@ -24,18 +42,19 @@ class CoordinatesY extends Point{
 
     @Override
     public String getPoint() {
-        return "CoordinatesY";
+        return "CoordinatesXY";
     }
 
     @Override
     public String getCoordinates() {
-        return "enter coordinates y1 and y2: ";
+        return "enter coordinates x1, x2, y1, y2: ";
     }
 
     @Override
     public double calculate() {
-        return y2 - y1;
+        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+
     }
 
-}
 
+}

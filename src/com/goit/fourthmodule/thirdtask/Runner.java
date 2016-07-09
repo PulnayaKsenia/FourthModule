@@ -1,61 +1,51 @@
 package com.goit.fourthmodule.thirdtask;
 
+import com.goit.fourthmodule.secondtask.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.*;
 
-public class Util {
+public class Runner {
     public static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
     public Point readConsole() throws IOException {
         System.out.println("If you need to count coordinate between point x and y,\n" +
-                "please, enter PointX or PointY or Out for exit: ");
+                "please, enter Point or Out for exit: ");
 
         String xy = READER.readLine();
         String[] split;
-        switch (xy) {
-            case "PointX":
-                CoordinatesX x = new CoordinatesX();
-                split = readParams(x);
+        Enum.Coordinate enumCoordinate = Enum.Coordinate.valueOf(xy);
+        switch (enumCoordinate) {
+            case Point:
+                CoordinatesXY coordinatesXY = new CoordinatesXY();
+                split = readParams(coordinatesXY);
 
                 try {
-                    x.setX1(Double.parseDouble(split[0]));
-                    x.setX2(Double.parseDouble(split[1]));
+                    coordinatesXY.setX1(Double.parseDouble(split[0]));
+                    coordinatesXY.setX2(Double.parseDouble(split[1]));
+                    coordinatesXY.setY1(Double.parseDouble(split[2]));
+                    coordinatesXY.setY2(Double.parseDouble(split[3]));
 
                 } catch (NumberFormatException ex) {
                     System.out.println("You enter string value, must be number!");
-                } return x;
+                } return coordinatesXY;
 
-            case "PointY":
-                CoordinatesY y = new CoordinatesY();
-                split = readParams(y);
-
-                try {
-                    y.setY1(Double.parseDouble(split[0]));
-                    y.setY2(Double.parseDouble(split[1]));
-                } catch (NumberFormatException ex) {
-                    System.out.println("You enter string value, must be number!");
-
-                } return y;
-
-            case "Out":
+            case Out:
                 System.exit(1);
             default:
                 readConsole();
 
         } return null;
-
     }
-
 
     private String[] readParams(Point point) throws IOException {
         System.out.println(point);
         String inputForPoint = READER.readLine();
 
         return inputForPoint.split(",");
-
     }
-
 }
 
 
