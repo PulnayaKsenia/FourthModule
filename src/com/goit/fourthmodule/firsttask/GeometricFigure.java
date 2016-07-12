@@ -1,11 +1,8 @@
 package com.goit.fourthmodule.firsttask;
 
 abstract class GeometricFigure {
-
     public abstract String getFigureType();
-
     public abstract String getInitialParams();
-
     public abstract double calculate();
 
     @Override
