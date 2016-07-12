@@ -25,5 +25,4 @@ class Circle extends GeometricFigure {
     public double calculate() {
         return Math.PI * radius * radius;
     }
-
 }

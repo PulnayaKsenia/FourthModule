@@ -1,8 +1,6 @@
 package com.goit.fourthmodule.secondtask;
 
 import java.io.IOException;
-import java.util.Scanner;
-
 import static com.goit.fourthmodule.secondtask.Util.READER;
 
 public class Main {

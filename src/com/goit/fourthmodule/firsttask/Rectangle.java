@@ -1,7 +1,5 @@
 package com.goit.fourthmodule.firsttask;
 
-import java.util.Scanner;
-
 class Rectangle extends GeometricFigure {
     private double length;
     private double height;
@@ -36,6 +34,5 @@ class Rectangle extends GeometricFigure {
     public double calculate() {
         return length * height;
     }
-
 }
 
