@@ -1,11 +1,8 @@
 package com.goit.fourthmodule.secondtask;
 
 abstract class Converter {
-
     public abstract String getConverterType();
-
     public abstract String getScale();
-
     public abstract double calculate();
 
     @Override

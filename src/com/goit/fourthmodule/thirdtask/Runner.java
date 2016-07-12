@@ -17,6 +17,7 @@ public class Runner {
         String xy = READER.readLine();
         String[] split;
         Enum.Coordinate enumCoordinate = Enum.Coordinate.valueOf(xy);
+
         switch (enumCoordinate) {
             case Point:
                 CoordinatesXY coordinatesXY = new CoordinatesXY();
@@ -30,14 +31,16 @@ public class Runner {
 
                 } catch (NumberFormatException ex) {
                     System.out.println("You enter string value, must be number!");
-                } return coordinatesXY;
+                }
+                return coordinatesXY;
 
             case Out:
                 System.exit(1);
+
             default:
                 readConsole();
-
-        } return null;
+        }
+        return null;
     }
 
     private String[] readParams(Point point) throws IOException {

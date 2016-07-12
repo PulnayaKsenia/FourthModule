@@ -6,7 +6,6 @@ import java.util.Scanner;
 import static com.goit.fourthmodule.secondtask.Util.READER;
 
 public class Main {
-
     public static void main(String[] args) throws IOException {
         Util.programBegin();
         String[] split;

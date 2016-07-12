@@ -1,7 +1,6 @@
 package com.goit.fourthmodule.secondtask;
 
 class CelsiusFahrenheit extends Converter {
-
     private double celsius;
 
     public double getCelsius() {
